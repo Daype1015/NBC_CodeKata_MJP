@@ -6,14 +6,17 @@ using namespace std;
 
 long long solution(long long n) {
     long long answer = 0;
-    int x = sqrt(n);
-    if( n == pow(x,2))
+   for(int i = 1; i <= n; i++)
     {
-        answer = pow(x + 1, 2);
-    }
-    else
-    {
-        answer = -1;
+	    if(n == (i * i))
+        {
+    	    answer = (i + 1) * (i + 1);
+            break;
+        }
+        else
+        {
+    	    answer = -1;
+        }
     }
     return answer;
 }
